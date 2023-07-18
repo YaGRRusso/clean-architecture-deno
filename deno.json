@@ -1,0 +1,8 @@
+{
+    "tasks": {
+      "dev": "deno run --allow-net --allow-read --allow-env api/app.ts"
+    },
+    "nodeModulesDir": false,
+    "importMap": "paths.json"
+  }
+  
