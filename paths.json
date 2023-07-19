@@ -1,8 +1,7 @@
 {
-    "imports": {
-        "@controllers/": "./api/controllers/",
-        "@models/": "./api/models/",
-        "@routes/": "./api/routes/"
-    }
+  "imports": {
+    "@controllers/": "./src/controllers/",
+    "@models/": "./src/models/",
+    "@routes/": "./src/routes/"
+  }
 }
-  
