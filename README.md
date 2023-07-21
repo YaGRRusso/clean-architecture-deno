@@ -17,6 +17,3 @@ Algumas bibliotecas foram utilizadas no projetos, como mostra a lista abaixo
   Express com o NodeJS
 
 - [Zod (v3)](https://deno.land/x/zod) Biblioteca de criação de schemas em TS
-
-- [Faker (v1)](https://deno.land/x/deno_faker) Biblioteca de geração de
-  informações aleatórias

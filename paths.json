@@ -1,7 +1,7 @@
 {
   "imports": {
-    "@controllers/": "./src/controllers/",
-    "@models/": "./src/models/",
-    "@routes/": "./src/routes/"
+    "@core/": "./src/core/",
+    "@infra/": "./src/infra/",
+    "@adapter/": "./src/adapter/"
   }
 }
