@@ -2,6 +2,6 @@
   "imports": {
     "@core/": "./src/core/",
     "@infra/": "./src/infra/",
-    "@adapter/": "./src/adapter/"
+    "@adapters/": "./src/adapters/"
   }
 }

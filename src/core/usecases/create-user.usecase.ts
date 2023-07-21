@@ -8,10 +8,7 @@ export const createUser = async ({
   data,
   repository,
 }: CreateUserInput): Promise<CreateUserOutput> => {
-  const newUser: User = {
-    id: crypto.randomUUID(),
-    ...data,
-  };
+  const newUser: User = data;
 
   return {
     data: await repository.create(newUser),
