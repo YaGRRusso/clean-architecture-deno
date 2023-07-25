@@ -1,17 +1,35 @@
 version: '3'
 
 services:
-  db:
+  postgres:
     image: postgres:15.3-alpine3.18
     restart: always
     environment:
-      POSTGRES_PASSWORD: pass123
       POSTGRES_USER: postgres
       POSTGRES_DB: postgres
+      POSTGRES_PASSWORD: pass123
     ports:
       - "5432:5432"
+    expose:
+      - '5432'
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
+  mysql:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_USER: 'mysql'
+      MYSQL_DATABASE: 'mysql'
+      MYSQL_PASSWORD: 'pass123'
+      MYSQL_ROOT_PASSWORD: 'pass123'
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+    volumes:
+      - mysql_data:/var/lib/mysql
+
 volumes:
   postgres_data:
+  mysql_data:

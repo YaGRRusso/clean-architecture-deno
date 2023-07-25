@@ -1,7 +1,13 @@
 {
   "imports": {
+    "oak": "https://deno.land/x/oak@v12.6.0/mod.ts",
+    "hono": "https://deno.land/x/hono@v3.3.3/mod.ts",
+    "cors": "https://deno.land/x/cors@v1.2.2/mod.ts",
+    "postgres": "https://deno.land/x/postgres@v0.17.0/mod.ts",
+    "mysql": "https://deno.land/x/mysql@v2.11.0/mod.ts",
+    "@adapters/": "./src/adapters/",
+    "@controllers/": "./src/controllers/",
     "@core/": "./src/core/",
-    "@infra/": "./src/infra/",
-    "@adapters/": "./src/adapters/"
+    "@infra/": "./src/infra/"
   }
 }

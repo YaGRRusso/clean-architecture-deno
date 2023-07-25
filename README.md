@@ -16,4 +16,28 @@ Algumas bibliotecas foram utilizadas no projetos, como mostra a lista abaixo
 - [Oak (v12)](https://deno.land/x/oak) Faz praticamente o mesmo trabalho do
   Express com o NodeJS
 
-- [Zod (v3)](https://deno.land/x/zod) Biblioteca de criação de schemas em TS
+## Estrutura do Projeto
+
+O projeto segue alguns padrões da Arquitetura Limpa (Clean Architecture).
+
+```bash
+root/src/
+├── core/
+|  ├── entities/
+|  ├── repositories/
+|  └── use-cases/
+├── adapters/
+├── controllers/
+├── infra/
+|  ├── database/
+|  |  ├── db.ts
+|  |  └── repositories/
+|  |     ├── memory/
+|  |     └── sql/
+|  └── http/
+|     ├── app.ts
+|     ├── middlewares/
+|     └── routes/
+└── utils/
+└── main.ts
+```

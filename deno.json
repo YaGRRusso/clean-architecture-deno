@@ -1,7 +1,9 @@
 {
   "tasks": {
     "start": "docker compose up -d && deno run --allow-net --allow-read --allow-env src/main.ts",
-    "dev": "docker compose up -d && deno run --allow-all --watch src/main.ts"
+    "dev": "deno task down && docker compose up -d && deno run --allow-all --watch src/main.ts",
+    "down": "docker compose down --remove-orphans",
+    "list": "docker container ls"
   },
   "nodeModulesDir": false,
   "importMap": "paths.json"
