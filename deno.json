@@ -2,6 +2,7 @@
   "tasks": {
     "start": "docker compose up -d && deno run --allow-net --allow-read --allow-env src/main.ts",
     "dev": "deno task down && docker compose up -d && deno run --allow-all --watch src/main.ts",
+    "test": "deno test --watch",
     "down": "docker compose down --remove-orphans",
     "list": "docker container ls"
   },
