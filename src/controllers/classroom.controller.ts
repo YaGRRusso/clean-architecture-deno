@@ -6,14 +6,16 @@ import { Params } from "@core/entities/logic/http.entity.ts";
 const classroomsMemory = ClassroomRepositoryMemory();
 
 export const getClassrooms = async () => {
-  const classrooms = await getClassroomsUsecase(classroomsMemory);
+  const classrooms = await getClassroomsUsecase({
+    repository: classroomsMemory,
+  });
   return classrooms;
 };
 
-export const getClassroomById = async (params: Params) => {
-  const classroom = await getClassroomUsecase(
-    classroomsMemory,
-    params?.id ?? "",
-  );
+export const getClassroom = async (params: Params) => {
+  const classroom = await getClassroomUsecase({
+    repository: classroomsMemory,
+    data: { id: params?.id },
+  });
   return classroom;
 };

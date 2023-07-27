@@ -1,6 +1,5 @@
 import ClassroomRepository from "@core/repositories/classroom.repository.ts";
 import Classroom from "@core/entities/classroom.entity.ts";
-import Output from "@core/entities/logic/output.entity.ts";
 
 export default (): ClassroomRepository => {
   const classrooms: Classroom[] = [
@@ -40,11 +39,11 @@ export default (): ClassroomRepository => {
     },
   ];
 
-  const getClassrooms = (): Promise<Classroom[]> => {
+  const getClassrooms: ClassroomRepository["getClassrooms"] = () => {
     return Promise.resolve(classrooms);
   };
 
-  const getClassroom = (id: string): Output<Classroom | undefined> => {
+  const getClassroom: ClassroomRepository["getClassroom"] = ({ id }) => {
     return Promise.resolve(classrooms.find((item) => item.id === id));
   };
 

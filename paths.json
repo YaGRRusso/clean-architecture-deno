@@ -9,6 +9,7 @@
     "@adapters/": "./src/adapters/",
     "@controllers/": "./src/controllers/",
     "@core/": "./src/core/",
-    "@infra/": "./src/infra/"
+    "@infra/": "./src/infra/",
+    "@utils/": "./src/utils/"
   }
 }

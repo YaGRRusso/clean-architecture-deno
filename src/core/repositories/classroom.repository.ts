@@ -1,7 +1,10 @@
 import Classroom from "@core/entities/classroom.entity.ts";
-import Output from "@core/entities/logic/output.entity.ts";
+
+export type GetClassroomInput = {
+  id?: string;
+};
 
 export default interface ClassroomRepository {
-  getClassrooms(): Output<Classroom[]>;
-  getClassroom(id: string): Output<Classroom | undefined>;
+  getClassrooms(): Promise<Classroom[]>;
+  getClassroom(data: GetClassroomInput): Promise<Classroom | undefined>;
 }

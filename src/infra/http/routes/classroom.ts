@@ -1,15 +1,10 @@
 import { Router } from "oak";
 import {
-  getClassroomById,
+  getClassroom,
   getClassrooms,
 } from "@controllers/classroom.controller.ts";
 
 const router = new Router();
-
-router.get("/", (ctx) => {
-  ctx.response.status = 200;
-  ctx.response.body = "Hello World";
-});
 
 router.get("/classrooms", async (ctx) => {
   const classrooms = await getClassrooms();
@@ -20,7 +15,7 @@ router.get("/classrooms", async (ctx) => {
 
 router.get("/classrooms/:id", async (ctx) => {
   const classroomId = ctx.params;
-  const classroom = await getClassroomById(classroomId);
+  const classroom = await getClassroom(classroomId);
 
   ctx.response.status = 200;
   ctx.response.body = classroom;
