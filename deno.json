@@ -3,7 +3,7 @@
     "start": "docker compose up -d && deno run --allow-net --allow-read --allow-env src/main.ts",
     "dev": "docker compose up -d && deno run --allow-all --watch src/main.ts",
     "test": "deno test --watch",
-    "down": "docker compose down --remove-orphans",
+    "down": "docker compose down --remove-orphans -v",
     "stop": "docker stop exercicios-deno-postgres-1 && docker stop exercicios-deno-mysql-1",
     "list": "docker container ls"
   },

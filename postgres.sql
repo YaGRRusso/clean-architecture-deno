@@ -1,0 +1,17 @@
+CREATE TABLE classrooms (
+  id VARCHAR(36) PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  open INTEGER NOT NULL,
+  close INTEGER NOT NULL,
+  capacity INTEGER NOT NULL
+);
+
+CREATE TABLE students (
+  id VARCHAR(36) PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  enter INTEGER NOT NULL,
+  leave INTEGER
+);
+
+ALTER TABLE students
+ADD COLUMN classroom_id INTEGER REFERENCES classrooms(id);
