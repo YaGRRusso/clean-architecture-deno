@@ -14,8 +14,8 @@ router.get("/classrooms", async (ctx) => {
 });
 
 router.get("/classrooms/:id", async (ctx) => {
-  const classroomId = ctx.params;
-  const classroom = await getClassroom(classroomId);
+  const params = ctx.params;
+  const classroom = await getClassroom(params);
 
   ctx.response.status = 200;
   ctx.response.body = classroom;

@@ -1,9 +1,9 @@
 import { Application } from "oak";
 import { oakCors } from "cors";
-import classroomRoutes from "@infra/http/oak/routes/classroom.ts";
+import classroomRoutes from "@infra/http/oak/routes/classrooms.ts";
 import testRoutes from "@infra/http/oak/routes/test.ts";
 
-const server = new Application();
+export const server = new Application();
 
 server.use(oakCors());
 server.use(testRoutes.routes());
@@ -16,8 +16,6 @@ server.use((ctx) => {
   ctx.response.body = "Not found";
 });
 
-export const startOak = (PORT: number | string, HOST: string) => {
+export default (PORT: number | string, HOST: string) => {
   server.listen({ port: Number(PORT), hostname: HOST });
 };
-
-export default server;
