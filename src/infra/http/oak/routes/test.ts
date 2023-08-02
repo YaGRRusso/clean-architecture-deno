@@ -10,6 +10,7 @@ router.get("/", (ctx) => {
     name: "Clean Arch Deno",
     version: "1.0.0",
     status: "Running",
+    engine: "Oak",
   };
 });
 
