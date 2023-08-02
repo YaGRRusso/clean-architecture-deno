@@ -1,9 +1,11 @@
 import ClassroomRepositoryMemory from "@infra/database/repositories/classroomMemory.repository.ts";
+import ClassroomRepositoryPostgres from "@infra/database/repositories/classroomPostgres.repository.ts";
 import getClassroomsUsecase from "@core/use-cases/getClassrooms.usecase.ts";
 import getClassroomUsecase from "@core/use-cases/getClassroom.usecase.ts";
 import { Params } from "@core/entities/logic/http.entity.ts";
 
-const classroomsMemory = ClassroomRepositoryMemory();
+// const classroomsMemory = ClassroomRepositoryMemory();
+const classroomsMemory = ClassroomRepositoryPostgres();
 
 export const getClassrooms = async () => {
   const classrooms = await getClassroomsUsecase({
